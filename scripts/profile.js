@@ -5,23 +5,9 @@ import { visibleNoti } from "./noti.js";
 
 // set profile.html dir for index.html or sub pages
 let profilePageDir = "./profile.html";
-let loginPageDir = "./login.html";
 
-if (window.location.pathname.endsWith('index.html')) {
+if (window.location.pathname.endsWith('index.html')) 
     profilePageDir = "./pages/profile.html";
-    loginPageDir = "./pages/login.html";
-}
-
-// Load user profile when authenticated
-onAuthStateChanged(auth, async (user) => {
-    if (!user) 
-        window.location.href = loginPageDir;
-
-    else {
-        await loadUserProfile(user.uid);
-        setupProfileListeners(user.uid);
-    }
-});
 
 // Load user profile data
 async function loadUserProfile(userId) {
