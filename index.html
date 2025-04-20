@@ -86,7 +86,10 @@
 
     <script type="module">
         import { loadNav } from "./scripts/profile.js";
-        loadNav();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadNav();
+        });
     </script>
 </body>
 </html>
