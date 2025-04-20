@@ -1,0 +1,159 @@
+#main{
+    margin: auto;
+    width: 70vw;
+    margin-top: 20vh;
+    text-align: center;
+}
+
+.input-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.input-box label{
+    margin: 10px 0;
+}
+
+.input-box input{
+    text-align: center;
+    width: 100%;
+    border: 2px dashed var(--blue);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#opt{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#opt button{
+    width: calc(90% / var(--quantity));
+    transition: all 0.3s ease;
+}
+
+#opt button:hover, .opt-chosen{
+    width: calc(90% / var(--quantity) + 5%);
+}
+
+#opt button.opt-chosen {
+    width: calc(90% / var(--quantity) + 5%);
+    animation: shake 0.5s infinite;
+}
+
+table {
+    position: relative;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    margin: 20px 0;
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+th:last-child {
+    width: 5%;
+}
+
+th, td {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+}
+
+th {
+    width: auto;
+    text-align: center;
+    background-color: #5dc144;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td {
+    background-color: #f0f0f0;
+    color: #333333;
+    font-size: 16px;
+}
+
+tr:hover td {
+    background-color: #e6f7e6;
+}
+
+#add-btn {
+    margin: -70px 0 0 -50px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: gainsboro;
+    color: white;
+    cursor: pointer; 
+}
+
+#confirm-btn {
+    margin-top: 100px;
+}
+
+td select {
+    width: 100%;
+    padding: 10px; 
+    border: none;
+    border-radius: 10px; 
+    background-color: white; 
+    color: #333; 
+    font-size: 16px;
+    appearance: none; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); 
+    background-repeat: no-repeat; 
+    background-position: right 15px center; 
+    background-size: 12px;
+    cursor: pointer; 
+}
+
+td input[type="number"]{
+    text-align: center;
+    width: 85%;
+    height: 90%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.delete-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+td:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

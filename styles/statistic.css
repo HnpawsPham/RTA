@@ -1,0 +1,327 @@
+
+#report-container {
+    width: 80%;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.report-tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 8px 15px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 15px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.section-title{
+    text-align: center;
+}
+
+.report-group{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.report-section {
+    margin-bottom: 20px;
+    border-left: 5px solid #4CAF50;
+    padding-left: 10px;
+}
+
+.report-section h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+
+.report-category{
+    position: relative;
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    margin: 20px 0;
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+.report-category th, .report-category td {
+    padding: 8px;
+    border: none;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+.report-category th {
+    width: auto;
+    text-align: center;
+    background-color: #5dc144;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.report-category td {
+    background-color: #f0f0f0;
+    color: #333333;
+    font-size: 16px;
+}
+
+.report-category h3 {
+    color: #555;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.report-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.report-item:last-child {
+    border-bottom: none;
+}
+
+.report-item h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.report-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.total-report {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.total-report h3 {
+    color: #2e7d32;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.total-report p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.top-employee-section {
+    margin: 30px auto;
+    width: 90%;
+}
+
+.top-employee {
+    position: relative;
+    background: linear-gradient(135deg, #ffeb3b, #ffc107);
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.top-employee h2 {
+    margin: 10px 0;
+    font-size: 28px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.top-employee .crown {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: auto;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.employee-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    margin: 20px auto;
+    transition: transform 0.3s;
+}
+
+.employee-avatar:hover {
+    transform: scale(1.05);
+}
+
+.achievement {
+    font-size: 20px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sparkle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.sparkle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0) 70%);
+    animation: sparkle-animation 2s infinite;
+    opacity: 0.5;
+}
+
+@keyframes sparkle-animation {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
+.other-employees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+    width: 90%;
+}
+
+.employee-card {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    border-radius: 10px;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.employee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.employee-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.employee-card p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.employee-card .report-count {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.search-bar {
+    width: 90%;
+    padding: 8px 12px;
+    margin: 10px 3%;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .top-employee {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .employee-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .employee-card {
+        width: 150px;
+    }
+}

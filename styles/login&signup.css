@@ -1,0 +1,48 @@
+body {
+    background-color: var(--dark-gray);
+}
+
+#form {
+    width: 50vw;
+    height: 35vh;
+    margin: 30vh 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#form h2{
+    color: white;
+    margin-bottom: 20px;
+}
+
+#form input{
+    width: 85%;
+}
+
+#submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+#signup-btn{
+    background-color: var(--dark-gray);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.divider{
+    width: 90%;
+}
+
+input {
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+}

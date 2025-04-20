@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo xử lý tang vật</title>
+    <link rel="shortcut icon" href="./assets/logo.png" class="shortcut-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <div id="noti"></div>
+    <div id="nav">
+        <ul>
+            <li class="nav-chosen">
+                <svg xmlns="http://www.w3.org/2000/svg" height="14" width="15.75" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-12c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 1 24z"/></svg>
+                <a href="#">Trang chủ</a></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M64 64C28.7 64 0 92.7 0 128L0 384c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 64zm16 64l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm16 80l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80-176c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm16 80l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM160 336c0-8.8 7.2-16 16-16l224 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-224 0c-8.8 0-16-7.2-16-16l0-32zM272 128l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM256 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM368 128l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM352 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM464 128l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM448 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm16 80l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg>
+                <a id="report-input-btn" href="./pages/report-input.html">Nhập báo cáo</a></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M160 80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-352zM0 272c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 160c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48L0 272zM368 96l32 0c26.5 0 48 21.5 48 48l0 288c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48z"/></svg>
+                <a href="./pages/statistic.html">Thống kê</a></li>
+        </ul>
+        <div id="account">
+            <p id="username">pham dinh hien nhi</p>
+            <img id="avt" src="./assets/default_avt.png" alt="">
+        </div> 
+    </div>
+
+    <div id="first-visit">
+        <img src="./assets/logo.png" alt="">
+        <div>
+            <h2>Tôi yêu công việc của tôi, I love my job <3.</h2>
+            <a class="btn red-btn" href="./pages/signup.html">Đăng kí</a>
+            <a class="btn special-btn" href="./pages/login.html">Tôi đã có tài khoản</a>
+        </div>
+    </div>
+
+    <div id="image-grid">
+    </div>
+
+    <div class="features-section">
+        <h2>Các tính năng chính</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <img src="./assets/pic (1).jpg" alt="Tính năng 1">
+                <h3>Báo cáo nhanh chóng</h3>
+                <p>Dễ dàng nhập liệu và tạo báo cáo chỉ trong vài phút với giao diện thân thiện.</p>
+            </div>
+            <div class="feature-card">
+                <img src="./assets/pic (1).jpg" alt="Tính năng 2">
+                <h3>Thống kê chi tiết</h3>
+                <p>Xem thống kê và báo cáo chi tiết với biểu đồ trực quan, dễ dàng theo dõi.</p>
+            </div>
+            <div class="feature-card">
+                <img src="./assets/pic (1).jpg" alt="Tính năng 3">
+                <h3>Bảo mật cao</h3>
+                <p>Dữ liệu được bảo mật tuyệt đối với hệ thống mã hóa tiên tiến.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial-section">
+        <h2>Người dùng nói gì về chúng tôi</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <img src="./assets/pic (1).jpg" alt="Người dùng 1">
+                <p>"Hệ thống báo cáo rất dễ sử dụng và tiết kiệm thời gian cho tôi rất nhiều. Tôi có thể dễ dàng theo dõi và quản lý công việc."</p>
+                <h4>Nguyễn Văn A</h4>
+                <span>Quản lý</span>
+            </div>
+            <div class="testimonial-card">
+                <img src="./assets/pic (1).jpg" alt="Người dùng 2">
+                <p>"Tôi rất hài lòng với tính năng thống kê. Nó giúp tôi nắm bắt tình hình một cách nhanh chóng và chính xác."</p>
+                <h4>Trần Thị B</h4>
+                <span>Nhân viên</span>
+            </div>
+            <div class="testimonial-card">
+                <img src="./assets/pic (1).jpg" alt="Người dùng 3">
+                <p>"Giao diện thân thiện, dễ sử dụng. Tôi đặc biệt thích tính năng báo cáo tự động, giúp tiết kiệm rất nhiều thời gian."</p>
+                <h4>Lê Văn C</h4>
+                <span>Giám đốc</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { loadNav } from "./scripts/profile.js";
+        loadNav();
+    </script>
+</body>
+</html>
