@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
+    <div id="noti"></div>
     <div id="nav">
         <ul>
             <li class="nav-chosen">
@@ -85,10 +86,7 @@
 
     <script type="module">
         import { loadNav } from "./scripts/profile.js";
-
-        document.addEventListener('DOMContentLoaded', function() {
-            loadNav();
-        });
+        loadNav();
     </script>
 </body>
 </html>

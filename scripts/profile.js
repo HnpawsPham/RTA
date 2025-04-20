@@ -5,14 +5,17 @@ import { visibleNoti } from "./noti.js";
 
 // set profile.html dir for index.html or sub pages
 let profilePageDir = "./profile.html";
+let loginPageDir = "./login.html";
 
-if (window.location.pathname.endsWith('index.html')) 
+if (window.location.pathname.endsWith('index.html')) {
     profilePageDir = "./pages/profile.html";
+    loginPageDir = "./pages/login.html";
+}
 
 // Load user profile when authenticated
 onAuthStateChanged(auth, async (user) => {
     if (!user) 
-        window.location.href = "./login.html";
+        window.location.href = loginPageDir;
 
     else {
         await loadUserProfile(user.uid);
@@ -30,7 +33,7 @@ async function loadUserProfile(userId) {
             // Create default profile if it doesn't exist
             const defaultProfile = {
                 email: auth.currentUser.email,
-                displayName: auth.currentUser.email.split('@')[0],
+                displayName: auth.currentUser.email.split('@')[0] || "Guest",
                 avatarURL: '../assets/default_avt.png',
                 role: 'user',
                 department: 'Chưa cập nhật',
