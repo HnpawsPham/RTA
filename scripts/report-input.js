@@ -190,7 +190,7 @@ function getReasonOptions(documentType) {
         case 'dang-bao':
             return `
                 <option value="trong-thoi-han">Trong thời hạn đăng báo</option>
-                <option value="dang-sung-cong">Đang sung-cong</option>
+                <option value="dang-sung-cong">Đang sung công</option>
                 <option value="ly-do-khac">Lý do khác</option>
             `;
         default:
