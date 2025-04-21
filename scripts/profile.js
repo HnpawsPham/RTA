@@ -14,13 +14,10 @@ if (window.location.pathname.endsWith('index.html')) {
 
 // Load user profile when authenticated
 onAuthStateChanged(auth, async (user) => {
-    if (!user) 
-        window.location.href = loginPageDir;
+    if (!user) return
 
-    else {
-        await loadUserProfile(user.uid);
-        setupProfileListeners(user.uid);
-    }
+    await loadUserProfile(user.uid);
+    setupProfileListeners(user.uid);
 });
 
 // Load user profile data
