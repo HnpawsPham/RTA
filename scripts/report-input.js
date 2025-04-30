@@ -90,7 +90,7 @@ confirmBtn.addEventListener('click', async () => {
     let decision = decisionInp.value.trim();
     let verdict = verdictInp.value.trim();
 
-    rows.forEach((row, index) => {
+    rows.forEach(async (row, index) => {
         if (index > 0) {
             const assetType = row.cells[1].querySelector('select').value;
             const solved = parseInt(row.cells[2].querySelector('input[type="number"]').value) || 0;
@@ -111,7 +111,7 @@ confirmBtn.addEventListener('click', async () => {
                 });
             }
             else {
-                visibleNoti("Vui lòng nhập đầy đủ thông tin báo cáo!", 3000);
+                await visibleNoti("Vui lòng nhập đầy đủ thông tin báo cáo!", 3000);
                 return;
             }
         }
@@ -121,7 +121,7 @@ confirmBtn.addEventListener('click', async () => {
     const reportId = `reports/${userId}/${Date.now()}`;
     await setData(reportId, reports);
     
-    visibleNoti("Nộp báo cáo thành công.", 3000);
+    await visibleNoti("Nộp báo cáo thành công.", 3000);
 
     resetTable();
     updateRowNumbers();
@@ -144,6 +144,14 @@ function getAssetOptions(documentType) {
                 <option value="container">Container</option>
                 <option value="tai-san-khac">Tài sản khác (bao gồm ma túy, tính theo số lượng)</option>
                 <option value="ma-tuy">Ma túy (khối lượng GRAM)</option>
+            `;
+        case 'tam-giu':
+            return `
+                <option value="oto">Ô tô</option>
+                <option value="xemay">Xe máy</option>
+                <option value="dienthoai-maytinh">Điện thoại, máy tính</option>
+                <option value="container">Container</option>
+                <option value="tai-san-khac">Tài sản khác</option>
             `;
         case 'tra':
             return `
@@ -193,6 +201,13 @@ function getReasonOptions(documentType) {
                 <option value="dang-sung-cong">Đang sung công</option>
                 <option value="ly-do-khac">Lý do khác</option>
             `;
+        case 'tam-giu':
+            return `
+                <option value="ke-bien">Đang trong quá trình kê biên, xử lý</option>
+                <option value="da-thx">Đương sự đã THX, đang thực hiện thủ tục trả</option>
+                <option value="tang-vat-noi-khac">Tang vật ở nơi khác</option>
+                <option value="ly-do-khac">Lý do khác</option>
+            `
         default:
             return '';
     }

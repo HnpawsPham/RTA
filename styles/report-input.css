@@ -35,7 +35,7 @@
 }
 
 #opt button{
-    width: calc(90% / var(--quantity));
+    flex-grow: 1;
     transition: all 0.3s ease;
 }
 

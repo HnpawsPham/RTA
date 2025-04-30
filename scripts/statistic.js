@@ -1,7 +1,6 @@
 import { auth } from "./firebase.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 import { getData } from "./firebase.js";
-import { visibleNoti } from "./noti.js";
 import { loadNav } from "./profile.js";
 
 loadNav();
@@ -104,7 +103,8 @@ function formatContentType(contentType) {
     const types = {
         "sung-cong": "Sung công",
         "tieu-huy": "Tiêu hủy",
-        tra: "Trả",
+        "tra": "Trả",
+        "tam-giu": "Tạm giữ để xử lí",
         "dang-bao": "Đăng báo tìm CHS",
     };
     return types[contentType] || contentType;
@@ -126,6 +126,9 @@ function formatReason(reason) {
         "dang-xu-ly-tai-san": "Đang xử lý tài sản do đương sự không đến nhận",
         "trong-thoi-han": "Trong thời hạn đăng báo",
         "dang-sung-cong": "Đang sung công",
+        "ke-bien" : "Đang trong quá trình kê biên, xử lý",
+        "da-thx" : "Đương sự đã THX, đang thực hiện thủ tục trả",
+        "tang-vat-noi-khac" : "Tang vật ở nơi khác"
     };
     return reasons[reason] || reason;
 }
